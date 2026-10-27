@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Izzy",
+        "relationship": "Pro-Hockey",
+        "detail": "Lives in Chicken, Alaska",
+        "hobbies":["Lint collecting", "Geocaching", "Coin rolling"]
+    },
+    {
+        "name": "Lily",
+        "relationship": "6th cousin, once removed",
+        "detail": "Enjoys playing the banjo",
+        "hobbies":["Soap carving", "Whittling", "Lock picking"]
+    },
+    {
+        "name": "Sarah",
+        "relationship": "MasterChef Jr",
+        "detail": "Thinks birds work for the government",
+        "hobbies":["Pigeon watching", "Trainspotting", "Fossil hunting"]
+    },
+    {
+        "name": "Ava",
+        "relationship": "Frenemy",
+        "detail": "Background dancer for the Chicago Bulls",
+        "hobbies":["Flag spotting", "Rock polishing", "Weather tracking"]
+    },
+    {
+        "name": "Kristen",
+        "relationship": "Uber driver",
+        "detail": "Has a pet tarantula named Fluffy",
+        "hobbies":["Kite flying", "Pebble painting", "Shopping cart testing"]
+    }
+]
