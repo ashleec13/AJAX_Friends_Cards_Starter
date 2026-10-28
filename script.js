@@ -10,6 +10,7 @@ const cardsContainer = document.getElementById("cards");
 const statusMessage = document.getElementById("status");
 
 // CHECKPOINT 2: When the Load Friends button is clicked, run loadFriends.
+loadButton.addEventListener("click", loadFriends);
 
 
 // -------------------------------------------------------------
@@ -38,7 +39,22 @@ function loadFriends() {
   //     } catch (error) {
   //       showDataError(error);
   //     }
-
+  const request = new XMLHttpRequest();
+  request.open("GET", "friends.json");
+  request.onload = function () {
+    if (request.status === 200) {
+      try {
+        const friends = JSON.parse(request.responseText);
+        renderFriends(friends);
+      } catch (error) {
+        showDataError(error);
+      }
+    } else {
+      showLoadError();
+    }
+  };
+  request.onerror = showLoadError;
+  request.send();
 }
 
 
