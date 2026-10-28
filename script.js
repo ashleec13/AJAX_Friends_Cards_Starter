@@ -79,7 +79,21 @@ function renderFriends(friends) {
     </article>
   </div>
   */
-
+  let cardsHTML = "";
+  for (const friend of friends) {
+    cardsHTML += `
+  <div class="col-12 col-md-6 col-lg-4">
+    <article class="card h-100">
+      <div class="card-body">
+        <h2 class="card-title h4">${friend.name}</h2>
+        <p class="relationship">${friend.relationship}</p>
+        <p>${friend.detail}</p>
+        <p class="hobbies"><strong>Hobbies:</strong> ${friend.hobbies.join(", ")}</p>
+      </div>
+    </article>
+  </div>`;
+  }
+  cardsContainer.innerHTML = cardsHTML;
 
   // Supplied success message. Keep this after the cards are updated.
   statusMessage.classList.remove("error");
