@@ -40,7 +40,9 @@ function loadFriends() {
   //       showDataError(error);
   //     }
   const request = new XMLHttpRequest();
+  // Request the friends data with GET.
   request.open("GET", "friends.json");
+  // Parse successful responses; show an error for bad status or invalid JSON.
   request.onload = function () {
     if (request.status === 200) {
       try {
@@ -79,6 +81,7 @@ function renderFriends(friends) {
     </article>
   </div>
   */
+  // Build one card per friend, then replace the container contents.
   let cardsHTML = "";
   for (const friend of friends) {
     cardsHTML += `
